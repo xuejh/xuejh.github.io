@@ -63,42 +63,6 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-This-is-a-new-article" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/06/08/This-is-a-new-article/" class="article-date">
-  <time datetime="2020-06-08T08:02:11.000Z" itemprop="datePublished">2020-06-08</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/06/08/This-is-a-new-article/">This is a new article</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/06/08/This-is-a-new-article/" data-id="ckb67j85x0000ksz72f91b0wh" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
     <article id="post-如何搭建个人博客" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2020/06/08/%E5%A6%82%E4%BD%95%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" class="article-date">
@@ -137,68 +101,22 @@
 
 <h2 id="查看效果"><a href="#查看效果" class="headerlink" title="查看效果"></a>查看效果</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">浏览器访问：https:<span class="comment">//tj-xiajiahao.github.io/ 即可看到效果。</span></span><br></pre></td></tr></table></figure>
 
+<h2 id="如何创建新文章"><a href="#如何创建新文章" class="headerlink" title="如何创建新文章"></a>如何创建新文章</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// [layout] 为布局，可选项为 `post`、`page`、`draft`，这将决定文章所在文件路径。</span></span><br><span class="line"><span class="comment">// &lt;title&gt; 为文章标题</span></span><br><span class="line"><span class="comment">// 如 hexo new post 除了帅气，我还有啥！</span></span><br><span class="line">hexo <span class="keyword">new</span> [layout] &lt;title&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="如何发布文章"><a href="#如何发布文章" class="headerlink" title="如何发布文章"></a>如何发布文章</h2><p><code>hexo g -d</code></p>
 <h2 id="错误处理"><a href="#错误处理" class="headerlink" title="错误处理"></a>错误处理</h2><p><code>npm ERR! code ETARGET</code><br><code>npm ERR! notarget No matching version found for hexo-server@^0.0.0.</code><br><code>npm ERR! notarget In most cases you or one of your dependencies are requesting</code><br><code>npm ERR! notarget a package version that doesn&#39;t exist.</code></p>
 <p><code>(base) xuejinhuideMac-mini:blog ND$ hexo new post 编译原理</code><br><code>ERROR Plugin load failed: hexo-renderer-marked</code><br><code>Error: EISDIR: illegal operation on a directory, read</code><br><code>ERROR Plugin load failed: hexo-server</code><br><code>Error: EISDIR: illegal operation on a directory, read</code></p>
 <p>原因是找不到合适的hexo-renderer-marked和hexo-server版本,修改package.json</p>
 <p><code>&quot;hexo-renderer-marked&quot;: &quot;^1.0.1&quot;,</code></p>
 <p><code>&quot;hexo-server&quot;: &quot;&gt;0.0.0&quot;</code></p>
-<h2 id="如何创建新文章"><a href="#如何创建新文章" class="headerlink" title="如何创建新文章"></a>如何创建新文章</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// [layout] 为布局，可选项为 `post`、`page`、`draft`，这将决定文章所在文件路径。</span></span><br><span class="line"><span class="comment">// &lt;title&gt; 为文章标题</span></span><br><span class="line"><span class="comment">// 如 hexo new post 除了帅气，我还有啥！</span></span><br><span class="line">hexo <span class="keyword">new</span> [layout] &lt;title&gt;</span><br></pre></td></tr></table></figure>
-
+<h2 id="页面一直显示空白问题"><a href="#页面一直显示空白问题" class="headerlink" title="页面一直显示空白问题"></a>页面一直显示空白问题</h2><p>原因应该是之前发文章是这么写的hexo new post 除了帅气，我还有啥！，应该改为这么写hexo new “This is a new article”。</p>
+<h2 id="Ctrl-C-停止后重新hexo-s无法访问"><a href="#Ctrl-C-停止后重新hexo-s无法访问" class="headerlink" title="Ctrl+C 停止后重新hexo s无法访问"></a>Ctrl+C 停止后重新hexo s无法访问</h2><p>需要重新npm install一下</p>
 <h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p><a href="https://www.jianshu.com/p/390f202c5b0e" target="_blank" rel="noopener">5分钟搞定个人博客-hexo</a></p>
 
       
     </div>
     <footer class="article-footer">
       <a data-url="http://yoursite.com/2020/06/08/%E5%A6%82%E4%BD%95%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" data-id="ckb67dcga0001jez784vygspw" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/06/08/hello-world/" class="article-date">
-  <time datetime="2020-06-08T03:49:33.768Z" itemprop="datePublished">2020-06-08</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/06/08/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/06/08/hello-world/" data-id="ckb66nbd4000075z79tan93eq" class="article-share-link">Share</a>
       
       
     </footer>
@@ -239,15 +157,7 @@
       <ul>
         
           <li>
-            <a href="/2020/06/08/This-is-a-new-article/">This is a new article</a>
-          </li>
-        
-          <li>
             <a href="/2020/06/08/%E5%A6%82%E4%BD%95%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/">如何搭建个人博客-hexo</a>
-          </li>
-        
-          <li>
-            <a href="/2020/06/08/hello-world/">Hello World</a>
           </li>
         
       </ul>
