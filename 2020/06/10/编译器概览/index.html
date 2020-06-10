@@ -7,15 +7,15 @@
   
   <title>编译器概览 | 博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="概览编译器的整个编译过程如下图：  前端（Front End）指的是编译器对程序代码的分析和理解过程。 后端（Back End）则是生成目标代码的过程，跟目标机器有关。 本章只初略的聊一下编译的原理，详细的描述将在后续章节深入探讨。">
+  <meta name="description" content="概览编译器的整个编译过程如下图：  前端（Front End）指的是编译器对程序代码的分析和理解过程。 后端（Back End）则是生成目标代码的过程，跟目标机器有关。 本章只初略的聊一下编译的原理，详细的描述将在后续章节深入探讨。 参考这个是本人学习极客时间课程《编译原理之美》的笔记记录。详情请参考极客时间《编译原理之美》课程。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="编译器概览">
 <meta property="og:url" content="http://yoursite.com/2020/06/10/%E7%BC%96%E8%AF%91%E5%99%A8%E6%A6%82%E8%A7%88/index.html">
 <meta property="og:site_name" content="博客">
-<meta property="og:description" content="概览编译器的整个编译过程如下图：  前端（Front End）指的是编译器对程序代码的分析和理解过程。 后端（Back End）则是生成目标代码的过程，跟目标机器有关。 本章只初略的聊一下编译的原理，详细的描述将在后续章节深入探讨。">
+<meta property="og:description" content="概览编译器的整个编译过程如下图：  前端（Front End）指的是编译器对程序代码的分析和理解过程。 后端（Back End）则是生成目标代码的过程，跟目标机器有关。 本章只初略的聊一下编译的原理，详细的描述将在后续章节深入探讨。 参考这个是本人学习极客时间课程《编译原理之美》的笔记记录。详情请参考极客时间《编译原理之美》课程。">
 <meta property="og:image" content="https://raw.githubusercontent.com/xuejh/blogSource/master/blog/source/_posts/%E7%BC%96%E8%AF%91%E5%99%A8%E7%9A%84%E6%95%B4%E4%B8%AA%E7%BC%96%E8%AF%91%E8%BF%87%E7%A8%8B.png">
 <meta property="article:published_time" content="2020-06-10T07:00:34.000Z">
-<meta property="article:modified_time" content="2020-06-10T12:54:13.418Z">
+<meta property="article:modified_time" content="2020-06-10T13:04:49.550Z">
 <meta property="article:author" content="Jinhui Xue">
 <meta property="article:tag" content="编译原理">
 <meta name="twitter:card" content="summary">
@@ -99,6 +99,7 @@
 <p>前端（Front End）指的是编译器对程序代码的分析和理解过程。</p>
 <p>后端（Back End）则是生成目标代码的过程，跟目标机器有关。</p>
 <p>本章只初略的聊一下编译的原理，详细的描述将在后续章节深入探讨。</p>
+<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><p>这个是本人学习极客时间课程<a href="http://gk.link/a/10j0x" target="_blank" rel="noopener">《编译原理之美》</a>的笔记记录。详情请参考极客时间<a href="http://gk.link/a/10j0x" target="_blank" rel="noopener">《编译原理之美》</a>课程。</p>
 
       
     </div>
@@ -113,6 +114,15 @@
   
     
 <nav id="article-nav">
+  
+    <a href="/2020/06/10/%E8%AF%8D%E6%B3%95%E5%88%86%E6%9E%90/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          词法分析
+        
+      </div>
+    </a>
   
   
     <a href="/2020/06/08/%E8%8B%B1%E8%AF%AD%E8%AF%AD%E6%B3%95%E5%85%A5%E9%97%A8%E7%AC%AC%E4%B8%80%E8%AE%B2/" id="article-nav-older" class="article-nav-link-wrap">
@@ -132,7 +142,7 @@
     
 <div class="widget tag">
   <h3 class="title">Categories</h3>
-     <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/">编译原理</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%8B%B1%E8%AF%AD/">英语</a><span class="category-list-count">1</span></li></ul> 
+     <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/">编译原理</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%8B%B1%E8%AF%AD/">英语</a><span class="category-list-count">1</span></li></ul> 
 </div>
  
 
@@ -151,7 +161,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/" style="font-size: 10px;">编译原理</a> <a href="/tags/%E8%8B%B1%E8%AF%AD/" style="font-size: 10px;">英语</a>
+      <a href="/tags/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/" style="font-size: 20px;">编译原理</a> <a href="/tags/%E8%8B%B1%E8%AF%AD/" style="font-size: 10px;">英语</a>
     </div>
   </div>
 
@@ -171,6 +181,10 @@
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2020/06/10/%E8%AF%8D%E6%B3%95%E5%88%86%E6%9E%90/">词法分析</a>
+          </li>
         
           <li>
             <a href="/2020/06/10/%E7%BC%96%E8%AF%91%E5%99%A8%E6%A6%82%E8%A7%88/">编译器概览</a>
