@@ -63,6 +63,98 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-正则表达式" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/06/15/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/" class="article-date">
+  <time datetime="2020-06-15T02:45:21.000Z" itemprop="datePublished">2020-06-15</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/">编译原理</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/06/15/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/">正则表达式</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h1><p>由于编译原理用到了太多的正则知识，所以这一讲专门讲正则。</p>
+<h1 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h1><p>正则表达式是一种文本模式，包括普通字符（例如，a到z之间的字母）和特殊字符（称为“元字符”）模式描述在搜索文本时要匹配的一个或多个字符串。</p>
+<h1 id="基本语法"><a href="#基本语法" class="headerlink" title="基本语法"></a>基本语法</h1><h2 id="‘-’和’-’"><a href="#‘-’和’-’" class="headerlink" title="‘^’和’$’"></a>‘^’和’$’</h2><p>两个特殊的符号’^’和’$’。他们的作用是分别指出一个字符串的开始和结束。</p>
+<p>“^The”：表示所有以”The”开始的字符串（”There”，”The cat”等）；</p>
+<p>“of despair$”：表示所有以”of despair”结尾的字符串；</p>
+<p>“^abc$”：表示开始和结尾都是”abc”的字符串——呵呵，只有”abc”自己了；</p>
+<p>“notice”：表示任何包含”notice”的字符串。如果你不使用两个特殊字符，表示要查找的串在被查找串的任意部分——你并不把它定位在某一个顶端。</p>
+<p>要匹配 ^ 字符本身，请使用 ^,要匹配 $ 字符本身，请使用\$。</p>
+<h2 id="‘-’，’-’和’-’"><a href="#‘-’，’-’和’-’" class="headerlink" title="‘*’，’+’和’?’"></a>‘*’，’+’和’?’</h2><p>‘*’，’+’和’?’这三个符号，表示一个或一序列字符重复出现的次数。</p>
+<p>‘*’表示“没有或更多”</p>
+<p>‘+’表示“一次或更多”</p>
+<p>‘?’表示“没有或一次”</p>
+<p>“ab*”：表示一个字符串有一个a后面跟着零个或若干个b。（”a”, “ab”, “abbb”,……）；</p>
+<p>“ab+”：表示一个字符串有一个a后面跟着至少一个b或者更多；</p>
+<p>“ab?”：表示一个字符串有一个a后面跟着零个或者一个b；</p>
+<p>“a?b+$”：表示在字符串的末尾有零个或一个a跟着一个或几个b。</p>
+<p>要匹配 * 字符，请使用 \*。</p>
+<p>要匹配 + 字符，请使用 \+。</p>
+<p>要匹配 ? 字符，请使用 ?。</p>
+<h2 id=""><a href="#" class="headerlink" title="{}"></a>{}</h2><p>你也可以使用范围，用大括号括起，用以表示重复次数的范围。</p>
+<p>“ab{2}”：表示一个字符串有一个a跟着2个b（”abb”）；</p>
+<p>“ab{2,}”：表示一个字符串有一个a跟着至少2个b；</p>
+<p>“ab{3,5}”：表示一个字符串有一个a跟着3到5个b。</p>
+<p>请注意，你必须指定范围的下限（如：”{0,2}”而不是”{,2}”）。还有，你可能注意到了，’*’，’+’和<br>‘?’相当于”{0,}”，”{1,}”和”{0,1}”。</p>
+<p>要匹配 {，请使用 \{。</p>
+<p>要匹配 }，请使用 \}。</p>
+<h2 id="‘-’"><a href="#‘-’" class="headerlink" title="‘|’"></a>‘|’</h2><p>还有一个’|’，表示“或”操作：</p>
+<p>“hi|hello”：表示一个字符串里有”hi”或者”hello”；</p>
+<p>要匹配 |，请使用\|。</p>
+<h2 id="-1"><a href="#-1" class="headerlink" title="( )"></a>( )</h2><p>标记一个子表达式的开始和结束位置。子表达式可以获取供以后使用。要匹配这些字符，请使用\ ( 和\ )。</p>
+<p>“(b|cd)ef”：表示”bef”或”cdef”；</p>
+<p>“(a|b)*c”：表示一串”a””b”混合的字符串后面跟一个”c”；</p>
+<h2 id="-2"><a href="#-2" class="headerlink" title="[]"></a>[]</h2><p>[] 表示匹配方括号中的字符之一</p>
+<p>[abc] 匹配a或b或c<br>[a-z] 匹配从a到z的任何一个字符</p>
+<p>“^[a-zA-Z]”：表示一个以字母开头的字符串；</p>
+<p>“[0-9]%”：表示一个百分号前有一位的数字；</p>
+<p>“,[a-zA-Z0-9]$”：表示一个字符串以一个逗号后面跟着一个字母或数字结束。</p>
+<p>你也可以在方括号里用’^’表示不希望出现的字符，’^’应在方括号里的第一位。（如：”%[^a-zA-Z]%”表<br>示两个百分号中不应该出现字母）。</p>
+<h2 id="‘’"><a href="#‘’" class="headerlink" title="‘’"></a>‘’</h2><p>‘’    严格匹配单引号里面的所有字符，如:’if’或者’int’</p>
+<h2 id="‘-’-1"><a href="#‘-’-1" class="headerlink" title="‘.’"></a>‘.’</h2><p>‘.’可以替代任何字符：</p>
+<p>“a.[0-9]”：表示一个字符串有一个”a”后面跟着一个任意字符和一个数字；</p>
+<p>“^.{3}$”：表示有任意三个字符的字符串（长度为3个字符）；</p>
+<h2 id="元字符"><a href="#元字符" class="headerlink" title="元字符"></a>元字符</h2><p>\d   查找数字。</p>
+<p>\s   查找空白字符。</p>
+<p>\b  匹配单词边界。</p>
+<p>\uxxxx    查找以十六进制数 xxxx 规定的 Unicode 字符。</p>
+<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><p><a href="https://www.jb51.net/article/73342.htm" target="_blank" rel="noopener">正则表达式基本语法讲解</a></p>
+<p><a href="https://www.runoob.com/js/js-regexp.html" target="_blank" rel="noopener">正则在js中的应用</a></p>
+<p><a href="https://www.runoob.com/try/try.php?filename=tryjs_string_search_regexp" target="_blank" rel="noopener">正则js在线运行</a></p>
+<p><a href="https://www.runoob.com/regexp/regexp-syntax.html" target="_blank" rel="noopener">菜鸟教程正则</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/06/15/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/" data-id="ckbg4o0b300008vz7bca00vde" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/" rel="tag">编译原理</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-语法分析（一）" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2020/06/12/%E8%AF%AD%E6%B3%95%E5%88%86%E6%9E%90%EF%BC%88%E4%B8%80%EF%BC%89/" class="article-date">
@@ -532,7 +624,7 @@
     
 <div class="widget tag">
   <h3 class="title">Categories</h3>
-     <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/">编译原理</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%8B%B1%E8%AF%AD/">英语</a><span class="category-list-count">1</span></li></ul> 
+     <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/">编译原理</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%8B%B1%E8%AF%AD/">英语</a><span class="category-list-count">1</span></li></ul> 
 </div>
  
 
@@ -573,6 +665,10 @@
       <ul>
         
           <li>
+            <a href="/2020/06/15/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/">正则表达式</a>
+          </li>
+        
+          <li>
             <a href="/2020/06/12/%E8%AF%AD%E6%B3%95%E5%88%86%E6%9E%90%EF%BC%88%E4%B8%80%EF%BC%89/">语法分析（一）</a>
           </li>
         
@@ -586,10 +682,6 @@
         
           <li>
             <a href="/2020/06/08/%E8%8B%B1%E8%AF%AD%E8%AF%AD%E6%B3%95%E5%85%A5%E9%97%A8%E7%AC%AC%E4%B8%80%E8%AE%B2/">英语语法入门第一讲</a>
-          </li>
-        
-          <li>
-            <a href="/2020/06/08/%E5%A6%82%E4%BD%95%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/">如何搭建个人博客-hexo</a>
           </li>
         
       </ul>
