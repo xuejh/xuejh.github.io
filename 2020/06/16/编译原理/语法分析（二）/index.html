@@ -10,7 +10,7 @@
   <meta name="description" content="问题上一节课遇到到了一些问题，比如如何消除左递归，如何确保正确的优先级和结合性。所以本节课的主要目的就是解决这几个问题。 首先温习几个概念，左递归(Left Recursive)、优先级(Priority)和结合性（Associativity）。 在二元表达式的语法规则中，如果产生式的第一个元素是它自身，那么程序就会无限地递归下去，这种情况就叫做左递归。比如加法表达式的产生式“加法表达式 + 乘法">
 <meta property="og:type" content="article">
 <meta property="og:title" content="语法分析（二）">
-<meta property="og:url" content="http://yoursite.com/2020/06/16/%E8%AF%AD%E6%B3%95%E5%88%86%E6%9E%90%EF%BC%88%E4%BA%8C%EF%BC%89/index.html">
+<meta property="og:url" content="http://yoursite.com/2020/06/16/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/%E8%AF%AD%E6%B3%95%E5%88%86%E6%9E%90%EF%BC%88%E4%BA%8C%EF%BC%89/index.html">
 <meta property="og:site_name" content="博客">
 <meta property="og:description" content="问题上一节课遇到到了一些问题，比如如何消除左递归，如何确保正确的优先级和结合性。所以本节课的主要目的就是解决这几个问题。 首先温习几个概念，左递归(Left Recursive)、优先级(Priority)和结合性（Associativity）。 在二元表达式的语法规则中，如果产生式的第一个元素是它自身，那么程序就会无限地递归下去，这种情况就叫做左递归。比如加法表达式的产生式“加法表达式 + 乘法">
 <meta property="og:image" content="https://fz-cs.101.com/v0.1/download?dentryId=ef100ffe-f71e-4453-98a4-bfa3a0e42953&size=480&ext=jpg&token=im_disk:BKG5OJg63T7xFIm5xJvb:ws7phnhx40-apGfGCm8OQi-r2c0&expireAt=1592373966776&policy=eyJkZW50cnlJZCI6ImVmMTAwZmZlLWY3MWUtNDQ1My05OGE0LWJmYTNhMGU0Mjk1MyIsInVpZCI6ODcxMDMwLCJyb2xlIjoidXNlciIsInBvbGljeVR5cGUiOiJkb3dubG9hZCJ9">
@@ -69,9 +69,9 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-语法分析（二）" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-编译原理/语法分析（二）" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2020/06/16/%E8%AF%AD%E6%B3%95%E5%88%86%E6%9E%90%EF%BC%88%E4%BA%8C%EF%BC%89/" class="article-date">
+    <a href="/2020/06/16/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/%E8%AF%AD%E6%B3%95%E5%88%86%E6%9E%90%EF%BC%88%E4%BA%8C%EF%BC%89/" class="article-date">
   <time datetime="2020-06-16T02:40:26.000Z" itemprop="datePublished">2020-06-16</time>
 </a>
     
@@ -182,7 +182,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/06/16/%E8%AF%AD%E6%B3%95%E5%88%86%E6%9E%90%EF%BC%88%E4%BA%8C%EF%BC%89/" data-id="ckbhblkwf0000fuz76fmu9ayz" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/06/16/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/%E8%AF%AD%E6%B3%95%E5%88%86%E6%9E%90%EF%BC%88%E4%BA%8C%EF%BC%89/" data-id="ckblm6dco000j71z709pjae9d" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/" rel="tag">编译原理</a></li></ul>
@@ -193,7 +193,7 @@
     
 <nav id="article-nav">
   
-    <a href="/2020/06/17/%E8%AF%AD%E6%B3%95%E5%88%86%E6%9E%90%EF%BC%88%E4%B8%89%EF%BC%89/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2020/06/17/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/%E8%AF%AD%E6%B3%95%E5%88%86%E6%9E%90%EF%BC%88%E4%B8%89%EF%BC%89/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
@@ -203,7 +203,7 @@
     </a>
   
   
-    <a href="/2020/06/15/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2020/06/15/%E6%AD%A3%E5%88%99/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
       <div class="article-nav-title">正则表达式</div>
     </a>
@@ -220,7 +220,7 @@
     
 <div class="widget tag">
   <h3 class="title">Categories</h3>
-     <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%85%B6%E5%AE%83/">其它</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/">编译原理</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%8B%B1%E8%AF%AD/">英语</a><span class="category-list-count">1</span></li></ul> 
+     <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/antlr4%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97/">antlr4权威指南</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%85%B6%E5%AE%83/">其它</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%AD%A3%E5%88%99/">正则</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/">编译原理</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%8B%B1%E8%AF%AD/">英语</a><span class="category-list-count">1</span></li></ul> 
 </div>
  
 
@@ -229,7 +229,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%85%B6%E5%AE%83/" rel="tag">其它</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/" rel="tag">编译原理</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%8B%B1%E8%AF%AD/" rel="tag">英语</a></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/antlr4%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97/" rel="tag">antlr4权威指南</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%85%B6%E5%AE%83/" rel="tag">其它</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%AD%A3%E5%88%99/" rel="tag">正则</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/" rel="tag">编译原理</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%8B%B1%E8%AF%AD/" rel="tag">英语</a></li></ul>
     </div>
   </div>
 
@@ -239,7 +239,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/%E5%85%B6%E5%AE%83/" style="font-size: 10px;">其它</a> <a href="/tags/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/" style="font-size: 20px;">编译原理</a> <a href="/tags/%E8%8B%B1%E8%AF%AD/" style="font-size: 10px;">英语</a>
+      <a href="/tags/antlr4%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97/" style="font-size: 10px;">antlr4权威指南</a> <a href="/tags/%E5%85%B6%E5%AE%83/" style="font-size: 10px;">其它</a> <a href="/tags/%E6%AD%A3%E5%88%99/" style="font-size: 10px;">正则</a> <a href="/tags/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/" style="font-size: 20px;">编译原理</a> <a href="/tags/%E8%8B%B1%E8%AF%AD/" style="font-size: 10px;">英语</a>
     </div>
   </div>
 
@@ -261,23 +261,23 @@
       <ul>
         
           <li>
-            <a href="/2020/06/17/Antlr/">Antlr</a>
+            <a href="/2020/06/19/%E5%89%8D%E8%A8%80/">前言</a>
           </li>
         
           <li>
-            <a href="/2020/06/17/%E8%AF%AD%E6%B3%95%E5%88%86%E6%9E%90%EF%BC%88%E4%B8%89%EF%BC%89/">语法分析（三）</a>
+            <a href="/2020/06/17/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/Antlr/">Antlr</a>
           </li>
         
           <li>
-            <a href="/2020/06/16/%E8%AF%AD%E6%B3%95%E5%88%86%E6%9E%90%EF%BC%88%E4%BA%8C%EF%BC%89/">语法分析（二）</a>
+            <a href="/2020/06/17/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/%E8%AF%AD%E6%B3%95%E5%88%86%E6%9E%90%EF%BC%88%E4%B8%89%EF%BC%89/">语法分析（三）</a>
           </li>
         
           <li>
-            <a href="/2020/06/15/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/">正则表达式</a>
+            <a href="/2020/06/16/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/%E8%AF%AD%E6%B3%95%E5%88%86%E6%9E%90%EF%BC%88%E4%BA%8C%EF%BC%89/">语法分析（二）</a>
           </li>
         
           <li>
-            <a href="/2020/06/12/%E8%AF%AD%E6%B3%95%E5%88%86%E6%9E%90%EF%BC%88%E4%B8%80%EF%BC%89/">语法分析（一）</a>
+            <a href="/2020/06/15/%E6%AD%A3%E5%88%99/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/">正则表达式</a>
           </li>
         
       </ul>
