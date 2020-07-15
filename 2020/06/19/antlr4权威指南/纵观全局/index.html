@@ -5,21 +5,17 @@
   
 
   
-  <title>编译器概览 | 博客</title>
+  <title>纵观全局 | 博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="概览编译器的整个编译过程如下图：  前端（Front End）指的是编译器对程序代码的分析和理解过程。 后端（Back End）则是生成目标代码的过程，跟目标机器有关。 本章只初略的聊一下编译的原理，详细的描述将在后续章节深入探讨。 参考这个是本人学习极客时间课程《编译原理之美》的笔记记录。详情请参考极客时间《编译原理之美》课程。">
-<meta property="og:type" content="article">
-<meta property="og:title" content="编译器概览">
-<meta property="og:url" content="http://yoursite.com/2020/06/10/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/%E7%BC%96%E8%AF%91%E5%99%A8%E6%A6%82%E8%A7%88/index.html">
+  <meta property="og:type" content="article">
+<meta property="og:title" content="纵观全局">
+<meta property="og:url" content="http://yoursite.com/2020/06/19/antlr4%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97/%E7%BA%B5%E8%A7%82%E5%85%A8%E5%B1%80/index.html">
 <meta property="og:site_name" content="博客">
-<meta property="og:description" content="概览编译器的整个编译过程如下图：  前端（Front End）指的是编译器对程序代码的分析和理解过程。 后端（Back End）则是生成目标代码的过程，跟目标机器有关。 本章只初略的聊一下编译的原理，详细的描述将在后续章节深入探讨。 参考这个是本人学习极客时间课程《编译原理之美》的笔记记录。详情请参考极客时间《编译原理之美》课程。">
-<meta property="og:image" content="https://fz-cs.101.com/v0.1/download?dentryId=c95fbbd6-40f1-4cad-8a59-f8a9f5005ea9&size=480&ext=jpg&token=im_disk:BKG5OJg63T7xFIm5xJvb:SduvZhqf0eGkAYDBNKoV5358ucg&expireAt=1592273558192&policy=eyJkZW50cnlJZCI6ImM5NWZiYmQ2LTQwZjEtNGNhZC04YTU5LWY4YTlmNTAwNWVhOSIsInVpZCI6ODcxMDMwLCJyb2xlIjoidXNlciIsInBvbGljeVR5cGUiOiJkb3dubG9hZCJ9">
-<meta property="article:published_time" content="2020-06-10T07:00:34.000Z">
-<meta property="article:modified_time" content="2020-06-15T02:12:51.371Z">
+<meta property="article:published_time" content="2020-06-19T03:44:18.000Z">
+<meta property="article:modified_time" content="2020-06-19T03:44:35.868Z">
 <meta property="article:author" content="Jinhui Xue">
-<meta property="article:tag" content="编译原理">
+<meta property="article:tag" content="antlr4权威指南">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://fz-cs.101.com/v0.1/download?dentryId=c95fbbd6-40f1-4cad-8a59-f8a9f5005ea9&size=480&ext=jpg&token=im_disk:BKG5OJg63T7xFIm5xJvb:SduvZhqf0eGkAYDBNKoV5358ucg&expireAt=1592273558192&policy=eyJkZW50cnlJZCI6ImM5NWZiYmQ2LTQwZjEtNGNhZC04YTU5LWY4YTlmNTAwNWVhOSIsInVpZCI6ODcxMDMwLCJyb2xlIjoidXNlciIsInBvbGljeVR5cGUiOiJkb3dubG9hZCJ9">
   
     <link rel="alternate" href="/atom.xml" title="博客" type="application/atom+xml">
   
@@ -68,14 +64,14 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-编译原理/编译器概览" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-antlr4权威指南/纵观全局" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2020/06/10/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/%E7%BC%96%E8%AF%91%E5%99%A8%E6%A6%82%E8%A7%88/" class="article-date">
-  <time datetime="2020-06-10T07:00:34.000Z" itemprop="datePublished">2020-06-10</time>
+    <a href="/2020/06/19/antlr4%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97/%E7%BA%B5%E8%A7%82%E5%85%A8%E5%B1%80/" class="article-date">
+  <time datetime="2020-06-19T03:44:18.000Z" itemprop="datePublished">2020-06-19</time>
 </a>
     
   <div class="article-category">
-    <a class="article-category-link" href="/categories/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/">编译原理</a>
+    <a class="article-category-link" href="/categories/antlr4%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97/">antlr4权威指南</a>
   </div>
 
   </div>
@@ -86,7 +82,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      编译器概览
+      纵观全局
     </h1>
   
 
@@ -94,20 +90,14 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="概览"><a href="#概览" class="headerlink" title="概览"></a>概览</h1><p>编译器的整个编译过程如下图：</p>
-<p><img src="https://fz-cs.101.com/v0.1/download?dentryId=c95fbbd6-40f1-4cad-8a59-f8a9f5005ea9&size=480&ext=jpg&token=im_disk:BKG5OJg63T7xFIm5xJvb:SduvZhqf0eGkAYDBNKoV5358ucg&expireAt=1592273558192&policy=eyJkZW50cnlJZCI6ImM5NWZiYmQ2LTQwZjEtNGNhZC04YTU5LWY4YTlmNTAwNWVhOSIsInVpZCI6ODcxMDMwLCJyb2xlIjoidXNlciIsInBvbGljeVR5cGUiOiJkb3dubG9hZCJ9" alt="编译器的整个编译过程"></p>
-<p>前端（Front End）指的是编译器对程序代码的分析和理解过程。</p>
-<p>后端（Back End）则是生成目标代码的过程，跟目标机器有关。</p>
-<p>本章只初略的聊一下编译的原理，详细的描述将在后续章节深入探讨。</p>
-<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><p>这个是本人学习极客时间课程<a href="http://gk.link/a/10j0x" target="_blank" rel="noopener">《编译原理之美》</a>的笔记记录。详情请参考极客时间<a href="http://gk.link/a/10j0x" target="_blank" rel="noopener">《编译原理之美》</a>课程。</p>
-
+        
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/06/10/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/%E7%BC%96%E8%AF%91%E5%99%A8%E6%A6%82%E8%A7%88/" data-id="ckblm6dcj000671z7gcfn41iz" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/06/19/antlr4%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97/%E7%BA%B5%E8%A7%82%E5%85%A8%E5%B1%80/" data-id="ckclbeddr0001gvz767hh7rp5" class="article-share-link">Share</a>
       
       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/" rel="tag">编译原理</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/antlr4%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97/" rel="tag">antlr4权威指南</a></li></ul>
 
     </footer>
   </div>
@@ -115,19 +105,19 @@
     
 <nav id="article-nav">
   
-    <a href="/2020/06/10/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/%E8%AF%8D%E6%B3%95%E5%88%86%E6%9E%90/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2020/06/20/%E6%9D%A8%E4%BA%AE%E8%AE%B2%E8%8B%B1%E8%AF%AD/%E5%85%AC%E5%BC%80%E8%AF%BE/%E6%9D%A8%E4%BA%AE%E8%80%81%E5%B8%88%E6%9C%89%E8%AF%9D%E8%AF%B4/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          词法分析
+          杨亮老师有话说
         
       </div>
     </a>
   
   
-    <a href="/2020/06/08/%E8%8B%B1%E8%AF%AD/%E8%8B%B1%E8%AF%AD%E8%AF%AD%E6%B3%95%E5%85%A5%E9%97%A8%E7%AC%AC%E4%B8%80%E8%AE%B2/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2020/06/19/antlr4%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97/%E7%AC%AC%E4%B8%80%E7%AB%A0%E5%88%9D%E5%A7%8BANTLR/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">英语语法入门第一讲</div>
+      <div class="article-nav-title">第一章初始ANTLR</div>
     </a>
   
 </nav>
